@@ -1,0 +1,29 @@
+// Here's the simple code to bring the RGB value from Unreal to Arduino
+// On the Arduino side, all you need is: Arduino board, wires, resistors, and the LED
+
+const int redLEDPin = 3;
+const int greenLEDPin = 5;
+const int blueLEDPin = 6;
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(redLEDPin, OUTPUT);
+  pinMode(greenLEDPin, OUTPUT);
+  pinMode(blueLEDPin, OUTPUT);
+}
+
+void loop()
+{
+  if (Serial.available())
+  {
+    int r = Serial.parseInt();
+    int g = Serial.parseInt();
+    int b = Serial.parseInt();
+
+    analogWrite(redLEDPin, constrain(r,0,255));
+    analogWrite(greenLEDPin, constrain(g,0,255));
+    analogWrite(blueLEDPin, constrain(b,0,255));
+  }
+}
