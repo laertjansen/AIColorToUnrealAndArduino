@@ -17,11 +17,11 @@ def get_color():
     g = random.randint(0,255)
     b = random.randint(0,255)
 
-    return jsonify({
+return jsonify({
         "r": r,
         "g": g,
         "b": b
-    })
+})
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000)
