@@ -32,3 +32,17 @@ OPENAI_API_KEY=your_api_key_here
 
 The rest of the system runs inside Unreal Engine.
 
+The HTTP request is triggered from an Actor Blueprint. The returned JSON values are split into RGB channels, converted into a Linear Color, and used to drive a vector parameter on a material instance applied to a static mesh. A widget created in the Level Blueprint provides a button that sends the same RGB values to the Arduino via Serial.println() in the format R,G,B, allowing the physical LED to mirror the color generated in Unreal.
+
+![Alt text](AIActor_1.jpg)
+
+![Alt text](AIActor_2.jpg)
+
+![Alt text](AIActor_3.jpg)
+
+![Alt text](BP_Level1.jpg)
+
+![Alt text](BP_Level2.jpg)
+
+![Alt text](Cube.jpg)
+
