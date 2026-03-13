@@ -1,4 +1,4 @@
-
+![Alt text](AIColors.gif)
 
 You must create two new files in the system. The first is a Python server that generates random colors.
 
